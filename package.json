@@ -12,9 +12,10 @@
     "publish:jsr": "pnpm -r --filter './packages/*' exec jsr publish"
   },
   "devDependencies": {
-    "typescript": "^5.5.0",
+    "playwright": "^1.61.0",
     "tsx": "^4.16.0",
-    "vitest": "^2.0.0",
-    "unbuild": "^3.0.0"
+    "typescript": "^5.5.0",
+    "unbuild": "^3.0.0",
+    "vitest": "^2.0.0"
   }
 }
