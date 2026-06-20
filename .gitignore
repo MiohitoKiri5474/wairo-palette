@@ -3,6 +3,8 @@ dist/
 .DS_Store
 *.log
 .cache
-.vitepress/cache
-.vitepress/dist
+coverage/
+*.tsbuildinfo
+docs/.vitepress/cache
+docs/.vitepress/dist
 debug.png
