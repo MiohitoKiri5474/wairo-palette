@@ -1,0 +1,20 @@
+{
+  "name": "@nippon-color/css",
+  "version": "0.1.0",
+  "description": "Traditional Japanese colors — CSS utility classes",
+  "type": "module",
+  "exports": {
+    ".": "./dist/nippon-color.css"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsx src/generate.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nippon-color/core": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
