@@ -1,5 +1,5 @@
 {
-  "name": "@nippon-color/tailwind",
+  "name": "@wairo-palette/tailwind",
   "version": "0.1.0",
   "exports": {
     ".": "./src/index.ts"

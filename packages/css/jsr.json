@@ -1,5 +1,5 @@
 {
-  "name": "@nippon-color/css",
+  "name": "@wairo-palette/css",
   "version": "0.1.0",
   "exports": {
     ".": "./dist/nippon-color.css"

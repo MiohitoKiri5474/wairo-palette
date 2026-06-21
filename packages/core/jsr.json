@@ -1,5 +1,5 @@
 {
-  "name": "@nippon-color/core",
+  "name": "@wairo-palette/core",
   "version": "0.1.0",
   "exports": {
     ".": "./src/index.ts"

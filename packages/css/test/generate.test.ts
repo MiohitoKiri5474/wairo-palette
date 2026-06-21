@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { generateCSS } from '../src/generate.js'
-import { colorList } from '@nippon-color/core'
+import { colorList } from '@wairo-palette/core'
 
-describe('@nippon-color/css', () => {
+describe('@wairo-palette/css', () => {
   it('generates :root with CSS custom properties', () => {
     const css = generateCSS()
     expect(css).toContain(':root {')

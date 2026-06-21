@@ -1,19 +1,19 @@
-# @nippon-color/css
+# @wairo-palette/css
 
 ```sh
-npm install @nippon-color/css
+npm install @wairo-palette/css
 ```
 
 ## Setup
 
 **With a bundler:**
 ```ts
-import '@nippon-color/css'
+import '@wairo-palette/css'
 ```
 
 **Plain HTML:**
 ```html
-<link rel="stylesheet" href="node_modules/@nippon-color/css/dist/nippon-color.css">
+<link rel="stylesheet" href="node_modules/@wairo-palette/css/dist/wairo-palette.css">
 ```
 
 ## Utility Classes

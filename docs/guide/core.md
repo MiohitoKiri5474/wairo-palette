@@ -1,7 +1,7 @@
-# @nippon-color/core
+# @wairo-palette/core
 
 ```sh
-npm install @nippon-color/core
+npm install @wairo-palette/core
 ```
 
 ## API
@@ -11,7 +11,7 @@ npm install @nippon-color/core
 `Record<string, NipponColor>` keyed by romaji.
 
 ```ts
-import { colors } from '@nippon-color/core'
+import { colors } from '@wairo-palette/core'
 
 colors.beniaka.hex        // "#BF6766"
 colors.beniaka.romaji     // "beniaka"
@@ -26,7 +26,7 @@ colors.beniaka.hsl        // { h: 0, s: 35, l: 57 }
 `NipponColor[]` — all colors as an array.
 
 ```ts
-import { colorList } from '@nippon-color/core'
+import { colorList } from '@wairo-palette/core'
 
 colorList.length                          // ~250
 colorList.find(c => c.romaji === 'gofun') // NipponColor

@@ -1,32 +1,32 @@
 import { describe, it, expect } from 'vitest'
-import nipponPlugin from '../src/index.js'
-import { colorList } from '@nippon-color/core'
+import wairoPlugin from '../src/index.js'
+import { colorList } from '@wairo-palette/core'
 
-describe('@nippon-color/tailwind', () => {
+describe('@wairo-palette/tailwind', () => {
   it('exports a plugin object', () => {
-    expect(nipponPlugin).toBeDefined()
-    expect(typeof nipponPlugin).toBe('object')
+    expect(wairoPlugin).toBeDefined()
+    expect(typeof wairoPlugin).toBe('object')
   })
 
   it('has a handler function', () => {
-    expect(typeof nipponPlugin.handler).toBe('function')
+    expect(typeof wairoPlugin.handler).toBe('function')
   })
 
-  it('config.theme.extend.colors.nippon exists', () => {
-    const nippon = (nipponPlugin as any).config?.theme?.extend?.colors?.nippon
-    expect(nippon).toBeDefined()
-    expect(typeof nippon).toBe('object')
+  it('config.theme.extend.colors.wairo exists', () => {
+    const wairo = (wairoPlugin as any).config?.theme?.extend?.colors?.wairo
+    expect(wairo).toBeDefined()
+    expect(typeof wairo).toBe('object')
   })
 
-  it('nippon palette contains all colors keyed by romaji', () => {
-    const nippon = (nipponPlugin as any).config?.theme?.extend?.colors?.nippon as Record<string, string>
+  it('wairo palette contains all colors keyed by romaji', () => {
+    const wairo = (wairoPlugin as any).config?.theme?.extend?.colors?.wairo as Record<string, string>
     for (const color of colorList) {
-      expect(nippon[color.romaji]).toBe(color.hex)
+      expect(wairo[color.romaji]).toBe(color.hex)
     }
   })
 
-  it('nippon palette length matches colorList', () => {
-    const nippon = (nipponPlugin as any).config?.theme?.extend?.colors?.nippon as Record<string, string>
-    expect(Object.keys(nippon).length).toBe(colorList.length)
+  it('wairo palette length matches colorList', () => {
+    const wairo = (wairoPlugin as any).config?.theme?.extend?.colors?.wairo as Record<string, string>
+    expect(Object.keys(wairo).length).toBe(colorList.length)
   })
 })

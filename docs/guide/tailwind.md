@@ -1,18 +1,18 @@
-# @nippon-color/tailwind
+# @wairo-palette/tailwind
 
 ```sh
-npm install @nippon-color/tailwind
+npm install @wairo-palette/tailwind
 ```
 
 ## Tailwind v3
 
 ```js
 // tailwind.config.js
-import nipponColor from '@nippon-color/tailwind'
+import wairoPlugin from '@wairo-palette/tailwind'
 
 export default {
   content: ['./src/**/*.{html,js,ts,jsx,tsx,vue}'],
-  plugins: [nipponColor],
+  plugins: [wairoPlugin],
 }
 ```
 
@@ -21,15 +21,15 @@ export default {
 ```css
 /* main.css */
 @import "tailwindcss";
-@plugin "@nippon-color/tailwind";
+@plugin "@wairo-palette/tailwind";
 ```
 
 ## Usage
 
-All colors are namespaced under `nippon-` to avoid conflicts with Tailwind's built-in palette:
+All colors are namespaced under `wairo-` to avoid conflicts with Tailwind's built-in palette:
 
 ```html
-<div class="bg-nippon-beniaka text-nippon-gofun border-nippon-shironeri">
+<div class="bg-wairo-beniaka text-wairo-gofun border-wairo-shironeri">
   Traditional Japanese colors
 </div>
 ```

@@ -7,21 +7,21 @@ Pick the package(s) you need:
 ::: code-group
 
 ```sh [npm]
-npm install @nippon-color/core
-npm install @nippon-color/css
-npm install @nippon-color/tailwind
+npm install @wairo-palette/core
+npm install @wairo-palette/css
+npm install @wairo-palette/tailwind
 ```
 
 ```sh [pnpm]
-pnpm add @nippon-color/core
-pnpm add @nippon-color/css
-pnpm add @nippon-color/tailwind
+pnpm add @wairo-palette/core
+pnpm add @wairo-palette/css
+pnpm add @wairo-palette/tailwind
 ```
 
 ```sh [yarn]
-yarn add @nippon-color/core
-yarn add @nippon-color/css
-yarn add @nippon-color/tailwind
+yarn add @wairo-palette/core
+yarn add @wairo-palette/css
+yarn add @wairo-palette/tailwind
 ```
 
 :::
@@ -30,21 +30,21 @@ yarn add @nippon-color/tailwind
 
 **JS/TS constants:**
 ```ts
-import { colors } from '@nippon-color/core'
+import { colors } from '@wairo-palette/core'
 colors.beniaka.hex    // "#BF6766"
 colors.beniaka.kanji  // "紅赤"
 ```
 
 **CSS utilities:**
 ```html
-<!-- import '@nippon-color/css' once, then: -->
+<!-- import '@wairo-palette/css' once, then: -->
 <div class="bg-beniaka text-gofun">Hello</div>
 ```
 
 **Tailwind:**
 ```js
 // tailwind.config.js
-import nipponColor from '@nippon-color/tailwind'
-export default { plugins: [nipponColor] }
-// then: class="bg-nippon-beniaka text-nippon-gofun"
+import wairoPlugin from '@wairo-palette/tailwind'
+export default { plugins: [wairoPlugin] }
+// then: class="bg-wairo-beniaka text-wairo-gofun"
 ```

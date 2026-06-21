@@ -1,5 +1,5 @@
 {
-  "name": "@nippon-color/css",
+  "name": "@wairo-palette/css",
   "version": "0.1.0",
   "description": "Traditional Japanese colors — CSS utility classes",
   "type": "module",
@@ -12,7 +12,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@nippon-color/core": "workspace:*"
+    "@wairo-palette/core": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

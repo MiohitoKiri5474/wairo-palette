@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { colors, colorList } from '../src/index.js'
 
-describe('@nippon-color/core', () => {
+describe('@wairo-palette/core', () => {
   it('colorList has at least 200 entries', () => {
     expect(colorList.length).toBeGreaterThanOrEqual(200)
   })

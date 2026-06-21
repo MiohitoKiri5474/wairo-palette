@@ -1,4 +1,4 @@
-import { colorList } from '@nippon-color/core'
+import { colorList } from '@wairo-palette/core'
 import { writeFileSync, mkdirSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -30,6 +30,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const outDir = resolve(__dirname, '../dist')
   mkdirSync(outDir, { recursive: true })
   const css = generateCSS()
-  writeFileSync(resolve(outDir, 'nippon-color.css'), css)
-  console.log(`Generated ${css.split('\n').length} lines → dist/nippon-color.css`)
+  writeFileSync(resolve(outDir, 'wairo-palette.css'), css)
+  console.log(`Generated ${css.split('\n').length} lines → dist/wairo-palette.css`)
 }

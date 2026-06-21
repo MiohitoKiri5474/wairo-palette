@@ -1,23 +1,23 @@
-import { colorList } from '@nippon-color/core'
+import { colorList } from '@wairo-palette/core'
 
-const nipponColors: Record<string, string> = Object.fromEntries(
+const wairoColors: Record<string, string> = Object.fromEntries(
   colorList.map((c) => [c.romaji, c.hex])
 )
 
 // Plain plugin object compatible with Tailwind v3 plugin() API shape.
-// In v3: add to plugins: [nipponColor]
-// In v4: @plugin "@nippon-color/tailwind" in CSS
-const nipponColorPlugin = {
+// In v3: add to plugins: [wairoPlugin]
+// In v4: @plugin "@wairo-palette/tailwind" in CSS
+const wairoPlugin = {
   handler: () => {},
   config: {
     theme: {
       extend: {
         colors: {
-          nippon: nipponColors,
+          wairo: wairoColors,
         },
       },
     },
   },
 }
 
-export default nipponColorPlugin
+export default wairoPlugin

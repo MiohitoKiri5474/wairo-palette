@@ -1,5 +1,5 @@
 {
-  "name": "@nippon-color/tailwind",
+  "name": "@wairo-palette/tailwind",
   "version": "0.1.0",
   "description": "Traditional Japanese colors — Tailwind CSS plugin",
   "type": "module",
@@ -24,7 +24,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@nippon-color/core": "workspace:*"
+    "@wairo-palette/core": "workspace:*"
   },
   "peerDependencies": {
     "tailwindcss": ">=3.0.0"
