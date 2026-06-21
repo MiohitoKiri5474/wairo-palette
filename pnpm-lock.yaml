@@ -34,13 +34,13 @@ importers:
 
   packages/css:
     dependencies:
-      '@nippon-color/core':
+      '@wairo-palette/core':
         specifier: workspace:*
         version: link:../core
 
   packages/tailwind:
     dependencies:
-      '@nippon-color/core':
+      '@wairo-palette/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
