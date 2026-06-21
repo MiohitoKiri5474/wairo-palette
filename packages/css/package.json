@@ -1,12 +1,14 @@
 {
   "name": "@wairo-palette/css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Traditional Japanese colors — CSS utility classes",
   "type": "module",
   "exports": {
     ".": "./dist/nippon-color.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsx src/generate.ts",
     "test": "vitest run"
