@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { generateCSS } from '../src/generate.js'
+import { generateCSS, generateThemeCSS } from '../src/generate.js'
+import { DAY_THEME, NIGHT_THEME } from '../src/theme.js'
 import { colorList } from '@wairo-palette/core'
 
 describe('@wairo-palette/css', () => {
@@ -44,5 +45,37 @@ describe('@wairo-palette/css', () => {
       expect(css).toContain(`.fill-${color.romaji}`)
       expect(css).toContain(`.stroke-${color.romaji}`)
     }
+  })
+
+  it('includes day/night theme at the top', () => {
+    const css = generateCSS()
+    const themeIdx = css.indexOf('--wairo-bg')
+    const rootIdx = css.indexOf('--color-')
+    expect(themeIdx).toBeGreaterThanOrEqual(0)
+    expect(themeIdx).toBeLessThan(rootIdx)
+  })
+})
+
+describe('generateThemeCSS', () => {
+  it('emits day theme tokens in :root', () => {
+    const css = generateThemeCSS()
+    for (const [prop, val] of Object.entries(DAY_THEME)) {
+      expect(css).toContain(`${prop}: ${val}`)
+    }
+  })
+
+  it('emits night theme tokens inside prefers-color-scheme: dark', () => {
+    const css = generateThemeCSS()
+    expect(css).toContain('@media (prefers-color-scheme: dark)')
+    for (const [prop, val] of Object.entries(NIGHT_THEME)) {
+      expect(css).toContain(`${prop}: ${val}`)
+    }
+  })
+
+  it('night bg is darker than day bg', () => {
+    // sumi (#1C1C1C) lightness:11 < shironeri (#FCFAF2) lightness:97
+    const dayBg = parseInt(DAY_THEME['--wairo-bg'].slice(1), 16)
+    const nightBg = parseInt(NIGHT_THEME['--wairo-bg'].slice(1), 16)
+    expect(nightBg).toBeLessThan(dayBg)
   })
 })

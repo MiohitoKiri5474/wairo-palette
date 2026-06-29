@@ -2,11 +2,14 @@ import { colorList } from '@wairo-palette/core'
 import { writeFileSync, mkdirSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { generateThemeCSS } from './theme.js'
+
+export { generateThemeCSS } from './theme.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export function generateCSS(): string {
-  const lines: string[] = []
+  const lines: string[] = [generateThemeCSS()]
 
   lines.push(':root {')
   for (const color of colorList) {

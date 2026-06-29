@@ -4,7 +4,7 @@
   "description": "Traditional Japanese colors — CSS utility classes",
   "type": "module",
   "exports": {
-    ".": "./dist/nippon-color.css"
+    ".": "./dist/wairo-palette.css"
   },
   "files": [
     "dist"
